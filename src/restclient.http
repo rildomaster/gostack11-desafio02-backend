@@ -1,0 +1,39 @@
+### Utilize a Extensão "REST Client" no VSCode para testar as requisições
+
+@baseurl = http://localhost:3333/repositories
+
+###
+
+GET {{baseurl}}
+
+###
+
+POST {{baseurl}}
+Content-Type: application/json
+
+{
+    "title": "Desafio Node.js", 
+    "url": "http://github.com/rildomaster", 
+    "techs": ["Node.js", "React.js"], 
+    "likes": 10
+}
+
+###
+
+PUT {{baseurl}}/916760ac-e5ad-4d8d-a6a4-57f989cf591b
+Content-Type: application/json
+
+{
+    "title": "Desafio02", 
+    "url": "http://github.com/rocketseat", 
+    "techs": ["NodeJS", "ReactJS"]
+}
+
+###
+
+DELETE  {{baseurl}}/b314ff7a-bf0f-46f8-9fdb-e30b1772be6b
+
+###
+
+//Acrescentar likes
+POST {{baseurl}}/7c016b07-ca60-40b2-9385-a387ddb0f4c2/like
